@@ -1,6 +1,6 @@
 # Project 1: NBody
 
-This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Spring 2022. Please follow the directions carefully while you complete the project. Please refer to the directions at https://coursework.cs.duke.edu/201spring22/p1-nbody/ rather than any forks or local copies in the event that any changes are made to the document.
+This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Fall 2022.
 
 ## Outline
 - [Background](#background)
@@ -35,16 +35,13 @@ Below you can expand to see an animation of a completed project running with som
 
 
 ## Starter Code and Using Git
-You must have installed all software (Java, Git, VS Code) before you can complete the project.You can find the [directions for installation here](https://coursework.cs.duke.edu/201-public-documentation/resources-201/-/blob/main/installingSoftware.md).
 
-We'll be using Git and the installation of GitLab at [coursework.cs.duke.edu](https://coursework.cs.duke.edu). All code for classwork will be kept here. Git is software used for version control, and GitLab is an online repository to store code in the cloud using Git.
-
-**[This document details the workflow](https://coursework.cs.duke.edu/201-public-documentation/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** We recommend that you read and follow the directions carefully while working on a project! While coding, we recommend that you periodically (perhaps when completing a method or small section) push your changes as explained in Section 5.
+**[This document details the workflow](hhttps://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
 
 
 ## Developing, Running, Testing Code
 
-You're given the outline of a class `CelestialBody` with stub or missing methods and a constructor. You'll add code so that the class `CelestialBody.java` works as described below. This class represents a celestial body such as a planet or a sun. You'll implement [a constructor, methods to get the state of a `CelestialBody` (getters)](#instance-variables-constructors-getters) and [methods that determine the interactions between `CelestialBody` objects due to gravitational forces](#writing-the-methods). 
+You're given the outline of a class `CelestialBody` with stub or missing methods and a constructor. You'll add code so that the class `CelestialBody.java` works as described below. This class represents a celestial body such as a planet or a sun.  
 
 Finally, you will create a class `NBody.java` that drives a simulation between planets, suns, and celestial bodies interacting. This class will read a file of data that specifies the initial positions and masses of the bodies and then simulates their interaction over a set time period. The simulation will also animate the interactions between the bodies.
 
@@ -80,7 +77,7 @@ You'll have one constructor: it has six parameters, one for each instance variab
 
 <details>
 <summary>CelestialBody Getter Methods</summary>
-You'll also write six so-called getter methods specified in the class. The body of each method is a single return statement, returning the value of the corresponding instance variable. These getter methods allow the values of `private` instance variables to be accessed outside the class. For example, the method `getXVel()` is shown below. These are getter methods because they do not allow client programs to set the values, only to get the values. **You should include a comment for each getter method. Use the one for `getXVel` below as a model.
+You'll also write six so-called getter methods specified in the class. The body of each method is a single return statement, returning the value of the corresponding instance variable. These getter methods allow the values of `private` instance variables to be accessed outside the class. For example, the method `getXVel()` is shown below. These are getter methods because they do not allow client programs to set the values, only to get the values.
 
 <div align="center">
   <img width="310" height="115" src="p1-figures/getXVel.png">
@@ -111,7 +108,7 @@ This method returns the distance between two `CelestialBody` objects. Use the st
 r^2=dx^2 + dy^2
 ```
 
-where $`dx`$ is delta/difference between $`x`$-coordinates, similarly for $`dy`$.  Use `Math.sqrt` to calculate the return value.
+where $`dx`$ is delta/difference between $`x`$-coordinates, similarly for $`dy`$.  You can use the static method `Math.sqrt` to calculate the square root of a number.
 
 </details>
 
@@ -152,7 +149,7 @@ When you've implemented this method, test it by running `TestCalcForceExertedBy.
 
 These two methods describe the force exerted in the X and Y directions, respectively. The signature of `calcForceExertedByX` is shown above; `calcForceExertedByY` has a similar signature. 
 
-You can obtain the $`x`$- and $`y`$-components from the total force using the formulas below, where $`F`$ is the value returned by `calcForceExertedBy`, $`r`$ is the distance between two bodies, and $`F_x`$ and $`F_y`$ are the values to be returned by `calcForceExertedByX` and `calcForceExertedByY`, respectively. Note that $`dx`$ that $`dy`$ in the formula are $`\Delta x`$ and $`\Delta y`$, the difference between $`x`$ and $`y`$ coordinates respectively between the original body (`this`, the object on which the method is called) and the exerting body (the argument to the method).
+You can obtain the $`x`$- and $`y`$-components from the total force using the formulas below, where $`F`$ is the value returned by `calcForceExertedBy`, $`r`$ is the distance between two bodies, and $`F_x`$ and $`F_y`$ are the values to be returned by `calcForceExertedByX` and `calcForceExertedByY`, respectively. Note that $`dx`$ and $`dy`$ in the formula the differences between $`x`$ and $`y`$ coordinates respectively between the original body (`this`, the object on which the method is called) and the exerting body (the argument to the method).
 
 ```math
 F_x = F\frac{dx}{r}\\~\\
@@ -161,9 +158,9 @@ F_y = F\frac{dy}{r}
 
 Note: Be careful with the signs! In particular, be aware that $`dx`$ and $`dy`$ are signed (positive or negative). By convention, we define the positive $`x`$-direction as towards the right of the screen, and the positive $`y`$-direction as towards the top.
 
-You can read about the physics for these formulas in the NBody Physics document. You can test them using the program in `TestCalcForceExertedByXY.java`.
+Also note: While mathematically `F/r * dx` is the same as `F*dx/r`, because of roundoff error these may not be the same computationally. You should use `F*dx/r` in your method.
 
-_**Mathematically `F/r * dx` is the same as `F*dx/r`. However, because of roundoff error these may not be the same computationally. You should use `F*dx/r` in your method**_. 
+You can test them using the program in `TestCalcForceExertedByXY.java`.
 
 </details>
 
@@ -180,7 +177,7 @@ _**Mathematically `F/r * dx` is the same as `F*dx/r`. However, because of roundo
 
 This method returns the total/net force exerted on this body by all the bodies in the array parameter. The principle of superposition ([see Physics][Physics]) says that the net force acting on a `CelestialBody` object by many other bodies is the sum of the pairwise forces acting on the `CelestialBody` by each body. So you'll need to sum the forces returned by `calcForceExertedByX` (or `Y`) in calculating the value to return. 
 
-You must make sure _**NOT to include the force exerted by a body on itself!**_ The universe might collapse (Infinite/NaN error) if an object attracted itself. If you loop over each element in array `bodies`, you'll need code like what's shown below to avoid summing the force of an object on itself. In the body of the if statement you'd write code to accumulate the sum of all forces exerted on `this` `CelestialBody` by the `CelestialBody b`.
+You must make sure _**NOT to include the force exerted by a body on itself!**_ The universe might collapse (Infinite/NaN error) if an object attracted itself. If you loop over each element in array `bodies`, you'll need to check explicitly with code that looks something like the following.
 
 <br> 
 
@@ -234,7 +231,7 @@ These steps will update the position and velocity of the body making the simulat
 
 <br>
 
-This **void** method is described below in the section for `NBody` that describes where to call the CelestialBody.draw method. _**This method is already written, you don't need to write it.**_
+This **void** method is described below in the section for `NBody` that describes where to call the CelestialBody.draw method. _**This method is already written, you don't need to write or edit it.**_
 </details>
 
 After developing, implementing, testing, and debugging these `CelestialBody` methods you're ready to move to the simulation code.
