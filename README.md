@@ -243,7 +243,7 @@ The `NBody` class will use `CelestialBody` objects to run the simulation.
 <details>
 <summary>Details on the CelestialBody class</summary>
 
-This class consists only of `static` methods, including the main method that runs the simulation. Your task will be to implement the three `static` methods that have been outlined for you in the starter code. That code has `// TODO` comments indicating the code you need to add in the three `static` methods. These methods are described below.
+This class consists only of `static` methods, including the main method that runs the simulation. Your task will be to implement the three `static` methods that have been outlined for you in the starter code. That code has `// TODO` comments indicating where you need to make edits.
 
 <div align="center">
   <img src="p1-figures/NBodyMethods.png">
@@ -286,12 +286,11 @@ You can test your method using the provided `TestReadRadius.java` program.
 
 <br>
 
-This method returns an array of `CelestialBody` objects using the data read from the file. For example, `readBodies("./data/planets.txt")` should return an array of 5 `CelestialBody` objects. You will use the number of bodies (first value in data file) to create a `CelestialBody []` array to return. When created, each value in the array will be `null`, but you will read the values on each line and use these as parameters when you call `new` and create a `CelestialBody` object with the parameters on each line of the file.
+This method returns an array of `CelestialBody` objects using the data read from the file. For example, `readBodies("./data/planets.txt")` should return an array of 5 `CelestialBody` objects. You will use the number of bodies (first value in data file) to create a `CelestialBody []` array of the correct size to return. When created, each value in the array will be `null`, but you will read the values on each line and use these as parameters when you call `new` and create a `CelestialBody` object with the parameters on each line of the file.
 
-As you iterate through the information for each of the `CelestialBody` objects in the file, you will find the `nextInt()`, `nextDouble()`, and `next()` methods in the Scanner useful in reading `int`, `double`, and `String` values, respectively. Note that `next()` returns a `String`. Since each line has the same types of values, your for-loop will read data, create a new `CelestialBody` object with this data, then store it in the array you created before the loop.
+As you iterate through the information for each of the `CelestialBody` objects in the file, you will find the `nextInt()`, `nextDouble()`, and `next()` methods in the Scanner useful in reading `int`, `double`, and `String` values, respectively. Note that `next()` returns a `String`.
 
 You can test this method using the supplied `TestReadBodies.java` class. 
-
 
 </details>
 
@@ -300,18 +299,12 @@ You can test this method using the supplied `TestReadBodies.java` class.
 
 <br> 
 
-You'll see four TODO comments in the loop of the `main` method. Completing these will make your simulation run correctly and provide an animation of the simulation. 
+You'll see four TODO comments in the loop of the `main` method. Completing these will make your simulation run correctly and provide an animation of the simulation. The four TODOs are:
 
-Completing the last TODO first will show a non-moving image for each body in the simulation. _**You'll write a for-each loop over each `CelestialBody` object referenced in the array**_ `bodies` in the `main` method. In the loop you'll call the `CelestialBody.draw` method on each `CelestialBody` in the array, the `draw` method is already written and draws an image at the body's location for the body on which it's called.
-
-Most of the other TODOs in the outer, simulation loop require implementing a loop body, just as the drawing TODO used a loop over all the bodies. **You'll need to fill in the loop body**. There are three loops:
-1. Fill two arrays with x- and y- forces; the first loop.
-2. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters.
-3. Call `draw` on each body.
-
-- Create an `xForces` array and `yForces` array. Each should have the same size as the number of bodies in the simulation. You'll make new arrays on each iteration of the outer/simulation loop.
-- Calculate the net x and y forces for each body, storing these in the `xForces` and `yForces` arrays respectively. You'll need to loop over bodies to do this, updating array entries in your loop. You'll call `calcNetForceExertedByX`, for example, to determine the values stored in the `xForces` array.
-- Call update on each of the bodies. This will update each body's position and velocity. Again, you'll write a loop over bodies to do this. A separate loop after the previous one. The empty loops are given to you in the code.
+1. Create an `xForces` array and `yForces` array. Each should have the same size as the number of bodies in the simulation.
+2. Calculate the net x and y forces for each body, storing these in the `xForces` and `yForces` arrays respectively. You can use the `CelestialBody` methods you wrote previously to do this.
+3. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters.
+4. Call `draw` on each body.
 
 </details>
 
