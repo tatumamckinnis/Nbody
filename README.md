@@ -355,11 +355,12 @@ In terms of `totalTime` and `dt`, how many total time steps (that is, iterations
 
 
 ## Submitting, Reflect, and Grading
-You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/201-public-documentation/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. In particular, you cannot submit unless all your code has been pushed to your Git repository on coursework. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
+You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. In particular, you cannot submit unless all your code has been pushed to your Git repository on coursework. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
 
-**After completing the coding portion, fill out the [reflect form here](https://forms.office.com/Pages/ResponsePage.aspx?id=TsVyyzFKnk2xSh6jbfrJTErNjWEU70pGg_ytfEVEPi5UQkZSRUVQR0NXWjhXOTFYTjFRVUUyN0o0Si4u).**
+Don't forget to upload a PDF for the analysis part of this assignment and mark where you answer each question. This is a separate submission in Gradescope.
 
-You'll upload a PDF for the analysis part of this assignment. This is a *separate submission* in Gradescope.
+After submitting, fill out the [reflect form here](https://forms.office.com/Pages/ResponsePage.aspx?id=TsVyyzFKnk2xSh6jbfrJTErNjWEU70pGg_ytfEVEPi5UOU04STFPNjk0VjJOSzQxRFg0OUdKWkRRTC4u).
+
 
 ### Grading
 
@@ -368,7 +369,9 @@ The autograder will check all your CelestialBody methods and the NBody methods a
 | Points | Grading Criteria |
 | ------ | ------ |
 | 16 | Autograded constructor and methods for CelestialBody and code in NBody|
-| 6 |  Answers to analysis questions + reflect form |
+| 4 |  Answers to analysis questions |
+
+
 
 
 [Physics]:https://docs.google.com/document/d/1LRRW970ZwgZQtsif1L1SfRBTlB_VUGJAZKYol-DHGWE/edit?usp=sharing
