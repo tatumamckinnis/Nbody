@@ -5,12 +5,13 @@ This is the directions document for Project P1 NBody in CompSci 201 at Duke Univ
 ## Outline
 - [Background](#background)
 - [Starter Code and Using Git](#starter-code-and-using-git)
-- [Developing, Running, Testing Code ](#developing-running-testing-code)
+- [Developing, Running, Testing Code](#developing-running-testing-code)
   - [`CelestialBody` Variables, Constructor, and Getter Methods](#celestialbody-variables-constructor-and-getter-methods)
   - [Additional `CelestialBody` Methods](#additional-celestialbody-methods)
   - [The `NBody` Class](#the-nbody-class)
   - [`NBody` Methods](#nbody-methods)
-- [Running the Simulation and Analysis](#running-the-simulation-and-analysis)
+  - [Note on Running the Simulation](#note-on-running-the-simulation)
+- [Analysis Questions](#analysis-questions)
 - [Submitting, Reflect, and Grading](#submitting-reflect-and-grading)
 
 ## Background
@@ -308,8 +309,7 @@ You'll see four TODO comments in the loop of the `main` method. Completing these
 
 </details>
 
-
-## Running the Simulation and Analysis
+### Note on Running the Simulation
 
 When the simulation is over your code prints out the final state of the universe in the same format as the input, you can expand below for an example.
 
@@ -333,15 +333,25 @@ The code for printing is given to you in the `NBody.java` you start with. This c
 When the simulation finishes, you'll need to close/quit the graphics window to be able to run another simulation. Use the red X button in the upper left of the graphics window to dismiss the window.
 
 
-### Analysis
+## Analysis Questions
 
-This is a section where you gain further understanding of the project by running experiments with your code and drawing conclusions on the resulting behavior. You will need to run the simulation and observe the output to answer the questions. Write your answers in a text file / word processor and then **submit the answers as a PDF to the Analysis assignment on Gradescope.** Teaching assistants will look at your responses and grade them.
+Answer the following questions in your analysis. You'll submit your analysis as a separate PDF as a separate assignment to Gradescope.
 
-1. Copy/paste the output of your simulation when using planets.txt, running the simulation for 1,000,000 (one  million) seconds, and with a time-step/dt value of 25,000.
-2. Copy/paste the output of your simulation when using planets.txt, running the simulation for 2,000,000 (two  million) seconds, and with a time-step/dt value of 25,000.
-3. Run the simulation for a billion seconds (10^9) and a time-step/dt of a million. You should see behavior inconsistent with what is
-expected for celestial bodies. Why do you think increasing the time-step/dt to 1 million caused your simulation to behave this way?
-4. Run the simulation with the original time and dt values (`double totalTime = 39447000.0;` and `double dt = 25000.0;`), but use the input data file "data/kaleidoscope.txt". In fewer than 50 words describe the visualization you observe.
+### Question 1
+
+The data files used for this assignment start by stating the number of `CelestialBody` objects in the data file. Suppose this were not the case; could you still run the simulation if all other data were present? Briefly explain how you could still create an array of `CelestialBody` objects of the same size when reading the file.
+
+### Question 2
+
+If there are $`n`$ `CelestialBody` objects, how many many total times will the code have to execute the `calcForceExertedByX` method per time step (that is, per iteration of the outer loop of the main method) of the simulation? Your answer should be in terms of $`n`$. Briefly explain your answer.
+
+### Question 3
+
+In terms of `totalTime` and `dt`, how many total time steps (that is, iterations of the outer loop of the main method) will there be in the simulation? Briefly explain your ansswer. Based on this, would increasing the value of `dt` increase, decrease, or have no impact on computational resources necessary to run a complete simulation?
+
+### Question 4
+
+`dt`was initially set to `25000.0`. Change this value to `1000000.0` (one million) and run the simulation again. You should see behavior inconsistent with what is expected for the simulation. Briefly explain why increasing the value of `dt` could cause this behavior.
 
 
 ## Submitting, Reflect, and Grading
