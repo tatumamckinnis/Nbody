@@ -37,7 +37,7 @@ Below you can expand to see an animation of a completed project running with som
 
 ## Starter Code and Using Git
 
-**[This document details the workflow](hhttps://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
+**[This document details the workflow](https://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
 
 
 ## Developing, Running, Testing Code
