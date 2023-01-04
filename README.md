@@ -1,6 +1,6 @@
 # Project 1: NBody
 
-This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Fall 2022.
+This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Spring 2023.
 
 ## Outline
 - [Background](#background)
@@ -37,7 +37,7 @@ Below you can expand to see an animation of a completed project running with som
 
 ## Starter Code and Using Git
 
-**[This document details the workflow](https://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
+**[This document details the workflow](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
 
 
 ## Developing, Running, Testing Code
@@ -355,11 +355,9 @@ In terms of `totalTime` and `dt`, how many total time steps (that is, iterations
 
 
 ## Submitting, Reflect, and Grading
-You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-fall-22/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. In particular, you cannot submit unless all your code has been pushed to your Git repository on coursework. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
+You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
 
 Don't forget to upload a PDF for the analysis part of this assignment and mark where you answer each question. This is a separate submission in Gradescope.
-
-After submitting, fill out the [reflect form here](https://forms.office.com/Pages/ResponsePage.aspx?id=TsVyyzFKnk2xSh6jbfrJTErNjWEU70pGg_ytfEVEPi5UOU04STFPNjk0VjJOSzQxRFg0OUdKWkRRTC4u).
 
 
 ### Grading
