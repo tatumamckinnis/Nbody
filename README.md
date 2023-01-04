@@ -12,7 +12,7 @@ This is the directions document for Project P1 NBody in CompSci 201 at Duke Univ
   - [`NBody` Methods](#nbody-methods)
   - [Note on Running the Simulation](#note-on-running-the-simulation)
 - [Analysis Questions](#analysis-questions)
-- [Submitting, Reflect, and Grading](#submitting-reflect-and-grading)
+- [Submitting and Grading](#submitting-and-grading)
 
 ## Background
 
@@ -354,7 +354,7 @@ In terms of `totalTime` and `dt`, how many total time steps (that is, iterations
 `dt`was initially set to `25000.0`. Change this value to `1000000.0` (one million) and run the simulation again. You should see behavior inconsistent with what is expected for the simulation. Briefly explain why increasing the value of `dt` could cause this behavior.
 
 
-## Submitting, Reflect, and Grading
+## Submitting and Grading
 You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
 
 Don't forget to upload a PDF for the analysis part of this assignment and mark where you answer each question. This is a separate submission in Gradescope.
