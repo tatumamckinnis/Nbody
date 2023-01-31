@@ -360,17 +360,6 @@ You will submit the assignment on Gradescope. You can access Gradescope through 
 Don't forget to upload a PDF for the analysis part of this assignment and mark where you answer each question. This is a separate submission in Gradescope.
 
 
-### Grading
-
-The autograder will check all your CelestialBody methods and the NBody methods as well. You'll be able to see the results of running the tests when you submit to gradescope.
-
-| Points | Grading Criteria |
-| ------ | ------ |
-| 16 | Autograded constructor and methods for CelestialBody and code in NBody|
-| 4 |  Answers to analysis questions |
-
-
-
 
 [Physics]:https://docs.google.com/document/d/1LRRW970ZwgZQtsif1L1SfRBTlB_VUGJAZKYol-DHGWE/edit?usp=sharing
 
