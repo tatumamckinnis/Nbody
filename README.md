@@ -37,16 +37,16 @@ Below you can expand to see an animation of a completed project running with som
 
 ## Starter Code and Using Git
 
-**[This document details the workflow](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) for downloading the starter code for the project, updating your code on coursework using Git, and ultimately submitting to Gradescope for autograding.** 
+**See [the details document](docs/details.md) for information on using Git, starting the project, and more details. 
 
 
 ## Developing, Running, Testing Code
 
-You're given the outline of a class `CelestialBody` with stub or missing methods and a constructor. You'll add code so that the class `CelestialBody.java` works as described below. This class represents a celestial body such as a planet or a sun.  
+You're given the outline of a class `CelestialBody` with stub or missing methods and a missing constructor. You'll add code so that the class `CelestialBody.java` works as described below. This class represents a celestial body such as a planet or a sun.  
 
 Finally, you will create a class `NBody.java` that drives a simulation between planets, suns, and celestial bodies interacting. This class will read a file of data that specifies the initial positions and masses of the bodies and then simulates their interaction over a set time period. The simulation will also animate the interactions between the bodies.
 
-There are classes provided that help you test whether your constructor, getters, and interaction methods are correct. Running each `TestX` class will print *PASS* or *FAIL* messages to your terminal/console. You should only proceed to the next step when you've passed the current test. When these tests pass, there's a good chance your code is correct, but you may uncover additional errors when you run the `NBody` simulation.
+There are classes provided that help you test whether your constructor, getters, and interaction methods are correct. Running each `TestX` class will print *PASS* or *FAIL* messages to your terminal/console window. You should only proceed to the next step in development and coding when you've passed the current test. When these tests pass, there's a good chance your code is correct, but you may uncover additional errors when you run the `NBody` simulation.
 
 
 ### `CelestialBody` Variables, Constructor, and Getter Methods
@@ -62,13 +62,13 @@ The outline below shows the constructor, methods, and instance variables (or fie
   <img width="400" height="400" src="p1-figures/celestialBodyMethods.png">
 </div>
 
-You'll have six instance variables: `myXPos`, `myYPos`, `myXVel`, `myYVel`, `myMass`, `myFileName`. The first five have type `double`, the last is a `String`.
+There are six instance variables: `myXPos`, `myYPos`, `myXVel`, `myYVel`, `myMass`, `myFileName`. The first five have type `double`, the last is a `String`.
 </details>
 
 <details>
 <summary>CelestialBody Constructor</summary>
 
-You'll have one constructor: it has six parameters, one for each instance variable. The signatures of is shown below. 
+There is one constructor: it has six parameters, one for each instance variable. The signatures of is shown below. 
 
 <div align="center">
   <img width="576" height="248" src="p1-figures/celestialBodyConst1.png">
@@ -78,7 +78,7 @@ You'll have one constructor: it has six parameters, one for each instance variab
 
 <details>
 <summary>CelestialBody Getter Methods</summary>
-You'll also write six so-called getter methods specified in the class. The body of each method is a single return statement, returning the value of the corresponding instance variable. These getter methods allow the values of `private` instance variables to be accessed outside the class. For example, the method `getXVel()` is shown below. These are getter methods because they do not allow client programs to set the values, only to get the values.
+You'll also write six _getter methods_ specified in the class. The body of each method is a single return statement, returning the value of the corresponding instance variable. These getter methods allow the values of `private` instance variables to be accessed outside the class. For example, the method `getXVel()` is shown below. These are getter methods because they *do not allow client programs to set the values, only to get the values*.
 
 <div align="center">
   <img width="310" height="115" src="p1-figures/getXVel.png">
@@ -90,7 +90,7 @@ When you've implemented the constructor and the six getter methods you should be
 
 ### Additional `CelestialBody` Methods
 
-Now that you have the constructor and getter methods for the `CelestialBody` class, this section details the additional methods you will need to implement. 
+Now that you have successfully coded the constructor and getter methods for the `CelestialBody` class, you'll proceed to implement the additional methods described here.
 
 <details>
 <summary>The method CelestialBody.calcDistance</summary>
@@ -103,7 +103,7 @@ Now that you have the constructor and getter methods for the `CelestialBody` cla
 
 <br> 
 
-This method returns the distance between two `CelestialBody` objects. Use the standard distance formula to determine the distance between `this` body (using `myXPos` and `myYPos` or `this.myXPos` and `this.myYPos`) and the `CelestialBody` object specified by the parameter `b`. The distance is the value of $`r`$ in the formula below where
+This method returns the distance between two `CelestialBody` objects. Use the standard distance formula to determine the distance between `this` body (using `myXPos` and `myYPos` or `this.myXPos` and `this.myYPos`) and the `CelestialBody` object referenced by the parameter `b`. The distance is the value of $`r`$ in the formula below where
 
 ```math
 r^2=dx^2 + dy^2
@@ -124,7 +124,7 @@ where $`dx`$ is delta/difference between $`x`$-coordinates, similarly for $`dy`$
 
 <br>
 
-This method calculates and returns the force exerted on `this` body by the body specified as the parameter. You should calculate the force using the formula below. You can read about the physics of the formula in the [NBody Physics document][Physics].
+This method calculates and returns the force exerted on `this` body by the body referenced by the parameter `b`. You should calculate the force using the formula below. You can read about the physics of the formula in the [NBody Physics document][Physics].
 
 ```math
 F = G\frac{m_1m_2}{r^2}
@@ -150,7 +150,7 @@ When you've implemented this method, test it by running `TestCalcForceExertedBy.
 
 These two methods describe the force exerted in the X and Y directions, respectively. The signature of `calcForceExertedByX` is shown above; `calcForceExertedByY` has a similar signature. 
 
-You can obtain the $`x`$- and $`y`$-components from the total force using the formulas below, where $`F`$ is the value returned by `calcForceExertedBy`, $`r`$ is the distance between two bodies, and $`F_x`$ and $`F_y`$ are the values to be returned by `calcForceExertedByX` and `calcForceExertedByY`, respectively. Note that $`dx`$ and $`dy`$ in the formula the differences between $`x`$ and $`y`$ coordinates respectively between the original body (`this`, the object on which the method is called) and the exerting body (the argument to the method).
+You can obtain the $`x`$- and $`y`$-components from the total force using the formulas below, where $`F`$ is the value returned by `calcForceExertedBy`, $`r`$ is the distance between two bodies, and $`F_x`$ and $`F_y`$ are the values to be returned by `calcForceExertedByX` and `calcForceExertedByY`, respectively. Note that $`dx`$ and $`dy`$ in the formula are the differences between $`x`$ and $`y`$ coordinates, respectively, between the original body (`this`, the object on which the method is called) and the exerting body (the argument to the method).
 
 ```math
 F_x = F\frac{dx}{r}\\~\\
@@ -159,9 +159,9 @@ F_y = F\frac{dy}{r}
 
 Note: Be careful with the signs! In particular, be aware that $`dx`$ and $`dy`$ are signed (positive or negative). By convention, we define the positive $`x`$-direction as towards the right of the screen, and the positive $`y`$-direction as towards the top.
 
-Also note: While mathematically `F/r * dx` is the same as `F*dx/r`, because of roundoff error these may not be the same computationally. You should use `F*dx/r` in your method.
+*Also note:* While mathematically `F/r * dx` is the same as `F*dx/r`, because of roundoff error these may not be the same computationally. You should use `F*dx/r` in your method. *Please be attentive to this in your code!*
 
-You can test them using the program in `TestCalcForceExertedByXY.java`.
+You can test these methods using the program in `TestCalcForceExertedByXY.java`.
 
 </details>
 
@@ -188,7 +188,7 @@ You must make sure _**NOT to include the force exerted by a body on itself!**_ T
 
 <br> 
 
-You can test your code by running the program in `TestCalcNetForceExertedByXY.java`.
+You can test the code for this method by running the program in `TestCalcNetForceExertedByXY.java`.
 
 
 </details>
@@ -206,7 +206,7 @@ You can test your code by running the program in `TestCalcNetForceExertedByXY.ja
 
 This method is a so-called _mutator_. It doesn't return a value, but updates the state/instance variables of the `CelestialBody` object on which it's called. 
 
-This method will be called during the simulation to update the body's position and velocity with small time steps (the value of the first parameter, `deltaT`). The values of parameter `xforce` and `yforce` are the net forces exerted on this body by all other bodies in the simulation. When code calls the update method from `NBody.java`, you will determine the values of the arguments passed as these two parameters by calling `calcNetForceExertedByX` (or `Y`). In the formulas below the parameter `xforce` is $`F_x`$ and `yforce` is $`F_y`$. 
+This method will be called during the simulation to update the body's position and velocity with small time steps (the value of the first parameter, `deltaT`). The values of parameter `xforce` and `yforce` are the net forces exerted on this body by all other bodies in the simulation. When code calls the update method from `NBody.java`, you will determine the values of the arguments passed as these two parameters by calling `calcNetForceExertedByX` (or `Y`). In the formulas you're writing below the parameter `xforce` is $`F_x`$ and `yforce` is $`F_y`$. 
 
 This update method updates the instance variables `myXPos`, `myYPos`, `myXVel`, and `myYVel` in four steps.
 
@@ -221,7 +221,7 @@ a_y = \frac{F_y}{m}
 
 3. You'll use `nvx` (and a corresponding `nvy`) to calculate new values for `myXPos` and `myYPos` using the relationship between position and velocity, e.g., `nx = myXPos + deltaT*nvx`.
 
-4. _**After**_ you've calculated `nx`,`ny`,`nvx`, and `nvy`, you'll assign these to the instance variables `myXPos`, `myYPos`, `myXVel`, and `myYVel`, respectively. 
+4. _**After**_ you've calculated `nx`,`ny`,`nvx`, and `nvy`, you'll assign these to the instance variables `myXPos`, `myYPos`, `myXVel`, and `myYVel`, respectively. The key in *after* is that you do not update instance variable values until you've calculated each of the `nx`, `ny`, `nvx`, and `nvy` values.
 
 These steps will update the position and velocity of the body making the simulation possible. You can test this method using `TestUpdate.java`.
 
@@ -263,7 +263,7 @@ The data for planets, suns, and celestial bodies in general is in the format sho
 
 The first value is an integer _**n**_, the number of bodies for which data is given in the file. The next value is a `double`, the radius of the universe for the simulation. This value is used to set the scale for the animation.
 
-There are _**n**_ lines, one line for each `CelestialBody`. Each line contains six values as shown above. The first five values are `doubles`: the first two are initial x and y coordinates; the next two are initial x and y velocities; the next is the mass of the `CelestialBody`. The last value on a line is a `String` specifying the file in the images folder used for the animation of the simulation.
+Next, there are _**n**_ lines, one line for each `CelestialBody`. Each line contains six values as shown above. The first five values are `doubles`: the first two are initial x and y coordinates; the next two are initial x and y velocities; the next is the mass of the `CelestialBody`. The last value on a line is a `String` specifying the file in the images folder used for the animation of the simulation.
 
 </details>
 
@@ -289,7 +289,7 @@ You can test your method using the provided `TestReadRadius.java` program.
 
 This method returns an array of `CelestialBody` objects using the data read from the file. For example, `readBodies("./data/planets.txt")` should return an array of 5 `CelestialBody` objects. You will use the number of bodies (first value in data file) to create a `CelestialBody []` array of the correct size to return. When created, each value in the array will be `null`, but you will read the values on each line and use these as parameters when you call `new` and create a `CelestialBody` object with the parameters on each line of the file.
 
-As you iterate through the information for each of the `CelestialBody` objects in the file, you will find the `nextInt()`, `nextDouble()`, and `next()` methods in the Scanner useful in reading `int`, `double`, and `String` values, respectively. Note that `next()` returns a `String`.
+As you iterate through the information for each of the `CelestialBody` objects in the file (one per line), you will find the `nextInt()`, `nextDouble()`, and `next()` methods in the Scanner useful in reading `int`, `double`, and `String` values, respectively. Note that `next()` returns a `String`.
 
 You can test this method using the supplied `TestReadBodies.java` class. 
 
@@ -302,10 +302,11 @@ You can test this method using the supplied `TestReadBodies.java` class.
 
 You'll see four TODO comments in the loop of the `main` method. Completing these will make your simulation run correctly and provide an animation of the simulation. The four TODOs are:
 
-1. Create an `xForces` array and `yForces` array. Each should have the same size as the number of bodies in the simulation.
-2. Calculate the net x and y forces for each body, storing these in the `xForces` and `yForces` arrays respectively. You can use the `CelestialBody` methods you wrote previously to do this.
-3. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters.
-4. Call `draw` on each body.
+1. Create an `xForces` array and `yForces` array. Each should have the same size as the number of bodies in the simulation. Both array should 
+have type `double[]`, these are arrays of double values.
+2. Calculate the net x and y forces for each body, storing these in the `xForces` and `yForces` arrays respectively. You can use the `CelestialBody` methods you wrote in previous steps above to do this.
+3. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters. Notice the parameters in `update`, in particular the same value of `deltaT`, the first parameter, is passed to each `PlanetaryBody` object's `update` method. 
+4. Call `draw` on each body, again you'll need a loop and a call to the `draw` method (already implemented).
 
 </details>
 
@@ -328,7 +329,7 @@ When the simulation is over your code prints out the final state of the universe
 
 </details>
 
-The code for printing is given to you in the `NBody.java` you start with. This code isn't all that exciting (which is why we've provided a solution), but we'll need this method to work correctly to autograde your assignment. ***You should NOT print anything other than the final printing shown here***. This printing is done after your simulation completes. If you use debugging print statements, be sure to remove them before testing in Gradescope.
+The code for printing is given to you in the `NBody.java` you start with. This code isn't all that exciting (which is why we've provided a solution), but we'll need this method to work correctly to autograde your assignment. ***You should NOT print anything other than the final printing shown here***. This printing is done after your simulation completes. *If you use debugging print statements, be sure to remove them before testing in Gradescope.*
 
 When the simulation finishes, you'll need to close/quit the graphics window to be able to run another simulation. Use the red X button in the upper left of the graphics window to dismiss the window.
 
