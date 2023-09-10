@@ -90,12 +90,11 @@ You'll also write six _getter methods_ specified in the class. The body of each 
 
 When you've implemented the constructor and the six getter methods you should be able to run the program in `TestBodyConstructorGetters.java` to see if your code is correct. When it reports that everything works you can proceed to the next step in implementing the `CelestialBody` class. The report from running `TestBodyConstructorGetters` indicates whether each getter method passes.
 
-### Additional `CelestialBody` Methods
+## Additional `CelestialBody` Methods: update instance variables
 
 Now that you have successfully coded the constructor and getter methods for the `CelestialBody` class, you'll proceed to implement the additional methods described here.
 
-<details>
-<summary>CB2: The method CelestialBody.calcDistance</summary>
+### CB2: The method CelestialBody.calcDistance
 
 <br>
 
@@ -113,10 +112,7 @@ r^2=dx^2 + dy^2
 
 where $`dx`$ is delta/difference between $`x`$-coordinates, similarly for $`dy`$.  You can use the static method `Math.sqrt` to calculate the square root of a number.
 
-</details>
-
-<details>
-<summary>The method CelestialBody.calcForceExertedBy</summary>
+### CB3 The method CelestialBody.calcForceExertedBy
 
 <br>
 
@@ -136,11 +132,7 @@ Here $`m_1`$ and $`m_2`$ are the masses of the two bodies, $`G`$ is the gravitat
 
 When you've implemented this method, test it by running `TestCalcForceExertedBy.java`.
 
-
-</details>
-
-<details>
-<summary>CB3: The methods CelestialBody.calcForceExertedByX and calcForceExertedByY</summary>
+### CB4: The methods CelestialBody.calcForceExertedByX and calcForceExertedByY
 
 <br> 
 
@@ -165,10 +157,7 @@ Note: Be careful with the signs! In particular, be aware that $`dx`$ and $`dy`$ 
 
 You can test these methods using the program in `TestCalcForceExertedByXY.java`.
 
-</details>
-
-<details>
-<summary>CB4: The method CelestialBody.calcNetForceExertedByX and calcNetForceExertedByY</summary>
+### CB5: The method CelestialBody.calcNetForceExertedByX and calcNetForceExertedByY
 
 <br>
 
@@ -188,23 +177,13 @@ You must make sure _**NOT to include the force exerted by a body on itself!**_ T
   <img width="289" height="39" src="p1-figures/forLoop.png">
 </div>
 
-<br> 
-
 You can test the code for this method by running the program in `TestCalcNetForceExertedByXY.java`.
 
-
-</details>
-
-<details>
-<summary>CB5: The method CelestialBody.update</summary>
-
-<br> 
+### CB6: The method CelestialBody.update
 
 <div align="center">
   <img width="379" height="39" src="p1-figures/update.png">
 </div>
-
-<br> 
 
 This method is a so-called _mutator_. It doesn't return a value, but updates the state/instance variables of the `CelestialBody` object on which it's called. 
 
@@ -227,24 +206,16 @@ a_y = \frac{F_y}{m}
 
 These steps will update the position and velocity of the body making the simulation possible. You can test this method using `TestUpdate.java`.
 
-</details>
+### The method CelestialBody.draw
 
-<details>
-<summary>The method CelestialBody.draw</summary>
-
-<br>
 
 This **void** method is described below in the section for `NBody` that describes where to call the CelestialBody.draw method. _**This method is already written, you don't need to write or edit it.**_
-</details>
 
 After developing, implementing, testing, and debugging these `CelestialBody` methods you're ready to move to the simulation code.
 
-### The `NBody` Class
+## The `NBody` Class
 
 The `NBody` class will use `CelestialBody` objects to run the simulation.
-
-<details>
-<summary>Details on the CelestialBody class</summary>
 
 This class consists only of `static` methods, including the main method that runs the simulation. Your task will be to implement the three `static` methods that have been outlined for you in the starter code. That code has `// TODO` comments indicating where you need to make edits.
 
@@ -252,10 +223,7 @@ This class consists only of `static` methods, including the main method that run
   <img src="p1-figures/NBodyMethods.png">
 </div>
 
-</details>
-
-<details>
-<summary>Details on Data Format</summary>
+### Details on Data Format
 
 The data for planets, suns, and celestial bodies in general is in the format shown below. All files in the folder data are in this format. This is the file `planets.txt`:
 
@@ -267,27 +235,18 @@ The first value is an integer _**n**_, the number of bodies for which data is gi
 
 Next, there are _**n**_ lines, one line for each `CelestialBody`. Each line contains six values as shown above. The first five values are `doubles`: the first two are initial x and y coordinates; the next two are initial x and y velocities; the next is the mass of the `CelestialBody`. The last value on a line is a `String` specifying the file in the images folder used for the animation of the simulation.
 
-</details>
 
-
-### NBody Methods
+## NBody Methods
 
 This section describes the details of each of the three `static` methods you need to implement for the `NBody` class.
-<details>
-<summary>The method NBody.readRadius</summary>
 
-<br>
+### The method NBody.readRadius
 
 Given a file name, this method should return a double corresponding to the radius of the universe in that file, e.g. `readRadius("./data/planets.txt")` should return $`2.50 \cdot 10 ^{11}`$ (alternatively, 2.50e+11). You'll need to read the `int` value that's the number of bodies, then read the `double` value for the radius using the `Scanner` already created in the starter code. Use `s.nextInt()` and `s.nextDouble()` for the `Scanner` variable `s` to read an `int` and `double` value, respectively. Your code in `readRadius` must read both values, but only the radius is returned. The number of bodies (first value in a data file) is ignored.
 
 You can test your method using the provided `TestReadRadius.java` program.
 
-</details>
-
-<details>
-<summary>The method NBody.readBodies</summary>
-
-<br>
+### The method NBody.readBodies
 
 This method returns an array of `CelestialBody` objects using the data read from the file. For example, `readBodies("./data/planets.txt")` should return an array of 5 `CelestialBody` objects. You will use the number of bodies (first value in data file) to create a `CelestialBody []` array of the correct size to return. When created, each value in the array will be `null`, but you will read the values on each line and use these as parameters when you call `new` and create a `CelestialBody` object with the parameters on each line of the file.
 
@@ -295,12 +254,7 @@ As you iterate through the information for each of the `CelestialBody` objects i
 
 You can test this method using the supplied `TestReadBodies.java` class. 
 
-</details>
-
-<details>
-<summary>The method NBody.main</summary>
-
-<br> 
+### The method NBody.main
 
 You'll see four TODO comments in the loop of the `main` method. Completing these will make your simulation run correctly and provide an animation of the simulation. The four TODOs are:
 
@@ -310,9 +264,7 @@ have type `double[]`, these are arrays of double values.
 3. Call `update` on each body, using `dt` and the corresponding elements of these arrays as parameters. Notice the parameters in `update`, in particular the same value of `deltaT`, the first parameter, is passed to each `PlanetaryBody` object's `update` method. 
 4. Call `draw` on each body, again you'll need a loop and a call to the `draw` method (already implemented).
 
-</details>
-
-### Note on Running the Simulation
+## Note on Running the Simulation
 
 When the simulation is over your code prints out the final state of the universe in the same format as the input, you can expand below for an example.
 
