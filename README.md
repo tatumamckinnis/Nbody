@@ -49,7 +49,7 @@ There are classes provided in the code you get that help you test whether your c
 
 For each section below, you'll implement code in `CelestialBody`, then run a testing program you're given to see if the code you wrote passes the tests in each testing program. *Do not go to the next step* until your code passes each testing program.
 
-### `CelestialBody` Variables, Constructor, and Getter Methods
+### CB1: `CelestialBody` Variables, Constructor, and Getter Methods
 
 This section introduces the `CelestialBody` class and describes its instance variables, constructor, and getter methods, which you will need to implement. 
 
@@ -95,7 +95,7 @@ When you've implemented the constructor and the six getter methods you should be
 Now that you have successfully coded the constructor and getter methods for the `CelestialBody` class, you'll proceed to implement the additional methods described here.
 
 <details>
-<summary>The method CelestialBody.calcDistance</summary>
+<summary>CB2: The method CelestialBody.calcDistance</summary>
 
 <br>
 
@@ -140,7 +140,7 @@ When you've implemented this method, test it by running `TestCalcForceExertedBy.
 </details>
 
 <details>
-<summary>The methods CelestialBody.calcForceExertedByX and calcForceExertedByY</summary>
+<summary>CB3: The methods CelestialBody.calcForceExertedByX and calcForceExertedByY</summary>
 
 <br> 
 
@@ -168,7 +168,7 @@ You can test these methods using the program in `TestCalcForceExertedByXY.java`.
 </details>
 
 <details>
-<summary>The method CelestialBody.calcNetForceExertedByX and calcNetForceExertedByY</summary>
+<summary>CB4: The method CelestialBody.calcNetForceExertedByX and calcNetForceExertedByY</summary>
 
 <br>
 
@@ -196,7 +196,7 @@ You can test the code for this method by running the program in `TestCalcNetForc
 </details>
 
 <details>
-<summary>The method CelestialBody.update</summary>
+<summary>CB5: The method CelestialBody.update</summary>
 
 <br> 
 
