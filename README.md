@@ -1,6 +1,6 @@
 # Project 1: NBody
 
-This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Spring 2023.
+This is the directions document for Project P1 NBody in CompSci 201 at Duke University, Fall 2023.
 
 ## Outline
 - [Background](#background)
@@ -14,7 +14,7 @@ This is the directions document for Project P1 NBody in CompSci 201 at Duke Univ
 - [Analysis Questions](#analysis-questions)
 - [Submitting and Grading](#submitting-and-grading)
 
-## Background
+## Background (optional but encouraged)
 
 This assignment heavily borrows from Princeton and Berkeley Computer Science and the work of Robert Sedgewick, Kevin Wayne and Josh Hug.
 
