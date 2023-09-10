@@ -25,7 +25,7 @@ In this assignment, you will write a program to simulate the motion of _N_ objec
 
 Below you can expand to see an animation of a completed project running with some planets in our solar system. The animation repeats after one earth year, your program continues until the simulation completes.
 
-<summary>Example Simulation of Complete Project</summary>
+###Example Simulation of Complete Project###
 
 <div align="center">
   <img width="500" height="500" src="p1-figures/planets.gif">
@@ -34,7 +34,7 @@ Below you can expand to see an animation of a completed project running with som
 
 ## Starter Code and Using Git
 
-**See [the details document](docs/details.md) for information on using Git, starting the project, and more details. 
+See [the details document](docs/details.md) for information on using Git, starting the project, and more details. 
 
 
 ## Developing, Running, Testing Code
