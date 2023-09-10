@@ -48,12 +48,12 @@ There are classes provided that help you test whether your constructor, getters,
 
 ### `CelestialBody` Variables, Constructor, and Getter Methods
 
-This section introduces the `CelestialBody` class and describes its instance variables, constructor, and getter methods, which you will need to implement.
+This section introduces the `CelestialBody` class and describes its instance variables, constructor, and getter methods, which you will need to implement. For each section, you'll implement code in `CelestialBody`, then run a testing program you're given to see if the code you wrote passes the tests in each testing program. *Do not go to the next step* until your code passes each testing program.
 
 <details>
 <summary>CelestialBody Instance variables</summary>
 
-The outline below shows the constructor, methods, and instance variables (or fields)  of the `CelestialBody` class. All instance variables should be `private`. All methods should be `public` (if you write helper methods they should be `private`).
+The outline below shows the constructor, methods, and instance variables (or fields)  of the `CelestialBody` class. All instance variables should be `private`. All methods should be `public` (if you write helper methods they should be `private`). *When you clone the project, you'll get a `CelestialBody` class with the instance variables and stub methods already implemented*.
 
 <div align="center">
   <img width="400" height="400" src="p1-figures/celestialBodyMethods.png">
@@ -70,6 +70,8 @@ There is one constructor: it has six parameters, one for each instance variable.
 <div align="center">
   <img width="576" height="248" src="p1-figures/celestialBodyConst1.png">
 </div>
+
+*You'll write code to assign valuesl to *each of six* instance variables using the six parameters.*
 
 </details>
 
