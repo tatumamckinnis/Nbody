@@ -43,12 +43,15 @@ You're given the outline of a class `CelestialBody` with stub or missing methods
 
 Finally, you will create a class `NBody.java` that drives a simulation between planets, suns, and celestial bodies interacting. This class will read a file of data that specifies the initial positions and masses of the bodies and then simulates their interaction over a set time period. The simulation will also animate the interactions between the bodies.
 
-There are classes provided that help you test whether your constructor, getters, and interaction methods are correct. Running each `TestX` class will print *PASS* or *FAIL* messages to your terminal/console window. You should only proceed to the next step in development and coding when you've passed the current test. When these tests pass, there's a good chance your code is correct, but you may uncover additional errors when you run the `NBody` simulation.
+### How to develop and test code
 
+There are classes provided in the code you get that help you test whether your constructor, getters, and interaction methods are correct. Running each `TestX` class will print *PASS* or *FAIL* messages to your terminal/console window. You should only proceed to the next step in development and coding when you've passed the current test. When these tests pass, there's a good chance your code is correct, but you may uncover additional errors when you run the `NBody` simulation.
+
+For each section below, you'll implement code in `CelestialBody`, then run a testing program you're given to see if the code you wrote passes the tests in each testing program. *Do not go to the next step* until your code passes each testing program.
 
 ### `CelestialBody` Variables, Constructor, and Getter Methods
 
-This section introduces the `CelestialBody` class and describes its instance variables, constructor, and getter methods, which you will need to implement. For each section, you'll implement code in `CelestialBody`, then run a testing program you're given to see if the code you wrote passes the tests in each testing program. *Do not go to the next step* until your code passes each testing program.
+This section introduces the `CelestialBody` class and describes its instance variables, constructor, and getter methods, which you will need to implement. 
 
 <details>
 <summary>CelestialBody Instance variables</summary>
