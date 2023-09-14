@@ -268,7 +268,7 @@ have type `double[]`, these are arrays of double values.
 
 When the simulation is over your code prints out the final state of the universe in the same format as the input, you can expand below for an example.
 
-<details>
+
 <summary>Example Simulation Output</summary>
 
 |             |             |             |           |           |          |
@@ -281,7 +281,6 @@ When the simulation is over your code prints out the final state of the universe
 | 5.6664e+05 | 7.0808e+06 | 1.0861e-01 | 1.0639e-01 | 1.9890e+30  |    sun.gif |
 | 1.0555e+11 | 2.3363e+10 |-7.5708e+03 | 3.4204e+04 | 4.8690e+24 |   venus.gif |
 
-</details>
 
 The code for printing is given to you in the `NBody.java` you start with. This code isn't all that exciting (which is why we've provided a solution), but we'll need this method to work correctly to autograde your assignment. ***You should NOT print anything other than the final printing shown here***. This printing is done after your simulation completes. *If you use debugging print statements, be sure to remove them before testing in Gradescope.*
 
