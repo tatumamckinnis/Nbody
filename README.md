@@ -317,7 +317,12 @@ You will submit the assignment on Gradescope. You can access Gradescope through 
 
 Don't forget to upload a PDF for the analysis part of this assignment and mark where you answer each question. This is a separate submission in Gradescope.
 
-
+| Project Part | Points |
+| ------ | ------ |
+| CelestialBody | 8 |
+| NBody | 8 |
+| Analysis | 10 |
+| Zoom recording | 2 |
 
 [Physics]:https://docs.google.com/document/d/1LRRW970ZwgZQtsif1L1SfRBTlB_VUGJAZKYol-DHGWE/edit?usp=sharing
 
