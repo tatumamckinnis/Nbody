@@ -311,6 +311,10 @@ In terms of `totalTime` and `dt`, how many total time steps (that is, iterations
 
 Read (Making data visualizaiton more accessible for blind and low-vision individuals)[https://news.mit.edu/2022/data-visualization-accessible-blind-0602], and summarize in one paragraph the main ideas in the paper. In another paragraph relate the work you've done with this visualization to the ideas in that article and how you might make the results of this simulation effective for blind or low-vision people. 
 
+## Zoom recording
+
+Record the initial 20 minutes, or some 20 minutes, of you writing code to solve this project, 
+record the URL to your zoom cloud recording [using this link](https://forms.office.com/r/hCxFh6GEvf).
 
 ## Submitting and Grading
 You will submit the assignment on Gradescope. You can access Gradescope through the tab on Sakai. The [project workflow writeup](https://coursework.cs.duke.edu/cs-201-spring-23/resources-201/-/blob/main/projectWorkflow.md) explains the how to submit your project in detail. Be sure to push changes often and be sure your final program is in your Git repository before you submit it for autograding on Gradescope. Please take note that changes/commits on GitLab are NOT automatically synced to Gradescope. You are welcome to submit as many times as you like, only the most recent submission will count for a grade.
