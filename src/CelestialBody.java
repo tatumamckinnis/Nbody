@@ -159,6 +159,16 @@ public class CelestialBody {
 	public void update(double deltaT, 
 			           double xforce, double yforce) {
 		// TODO: complete method
+		double xAccel = xforce / myMass; 
+		double yAccel = yforce / myMass; 
+		double nvx = myXVel + deltaT * xAccel; 
+		double nvy = myYVel + deltaT * yAccel; 
+		double nx = myXPos + (deltaT * nvx); 
+		double ny = myYPos + (deltaT * nvy); 
+		myXPos = nx; 
+		myYPos = ny; 
+		myXVel = nvx; 
+		myYVel = nvy; 
 	}
 
 	/**
